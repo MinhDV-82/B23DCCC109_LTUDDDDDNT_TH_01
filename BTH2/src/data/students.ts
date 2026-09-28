@@ -4,7 +4,7 @@ export const initialStudents: Student[] = [
   {
     id: 'SV001',
     name: 'Nguyễn Minh Anh',
-    dateOfBirth: '2004-03-15',
+    dateOfBirth: '15/03/2004',
     gender: 'Nữ',
     email: 'minhanh@example.com',
     phone: '0901234567',
@@ -15,7 +15,7 @@ export const initialStudents: Student[] = [
   {
     id: 'SV002',
     name: 'Trần Quốc Bảo',
-    dateOfBirth: '2004-09-21',
+    dateOfBirth: '21/09/2004',
     gender: 'Nam',
     email: 'quocbao@example.com',
     phone: '0912345678',
@@ -26,7 +26,7 @@ export const initialStudents: Student[] = [
   {
     id: 'SV003',
     name: 'Lê Hoàng Nam',
-    dateOfBirth: '2004-12-02',
+    dateOfBirth: '02/12/2004',
     gender: 'Nam',
     email: 'hoangnam@example.com',
     phone: '0987654321',
@@ -37,7 +37,7 @@ export const initialStudents: Student[] = [
   {
     id: 'SV004',
     name: 'Lê Hoàng Minh',
-    dateOfBirth: '2004-12-02',
+    dateOfBirth: '02/12/2004',
     gender: 'Nam',
     email: 'hoangminh@example.com',
     phone: '0987654322',
@@ -48,7 +48,7 @@ export const initialStudents: Student[] = [
   {
     id: 'SV005',
     name: 'Lê Hoàng Tú',
-    dateOfBirth: '2004-12-02',
+    dateOfBirth: '02/12/2004',
     gender: 'Nam',
     email: 'hoangnam@example.com',
     phone: '0987654323',
@@ -59,7 +59,7 @@ export const initialStudents: Student[] = [
   {
     id: 'SV006',
     name: 'Lê Hoàng Nam',
-    dateOfBirth: '2004-12-02',
+    dateOfBirth: '02/12/2004',
     gender: 'Nam',
     email: 'hoangnam@example.com',
     phone: '0987654321',

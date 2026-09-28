@@ -33,7 +33,12 @@ export function StudentDetailScreen({
         style: 'destructive',
         onPress: () => {
           onDelete(studentId);
-          navigation.popToTop();
+          Alert.alert('Thành công', 'Đã xóa sinh viên thành công!', [
+            {
+              text: 'OK',
+              onPress: () => navigation.popToTop(),
+            },
+          ]);
         },
       },
     ]);

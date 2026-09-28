@@ -1,5 +1,6 @@
 import { useState } from 'react';
 import {
+  Alert,
   KeyboardAvoidingView,
   Platform,
   Pressable,
@@ -20,6 +21,22 @@ type Props = {
   existingIds?: string[];
   onSubmit: (student: Student) => void;
 };
+
+function isValidDate(dateStr: string): boolean {
+  const regex = /^(\d{2})\/(\d{2})\/(\d{4})$/;
+  const match = dateStr.match(regex);
+  if (!match) return false;
+
+  const day = parseInt(match[1], 10);
+  const month = parseInt(match[2], 10);
+  const year = parseInt(match[3], 10);
+
+  if (year < 1900 || year > new Date().getFullYear()) return false;
+  if (month < 1 || month > 12) return false;
+
+  const daysInMonth = new Date(year, month, 0).getDate();
+  return day >= 1 && day <= daysInMonth;
+}
 
 export function StudentFormScreen({
   navigation,
@@ -51,17 +68,42 @@ export function StudentFormScreen({
       !form.name.trim() ||
       !form.dateOfBirth.trim() ||
       !form.email.trim() ||
-      !form.className.trim()
-    )
-      return setError('Vui lòng điền các trường bắt buộc.');
-    if (!student && existingIds.includes(id.trim()))
+      !form.className.trim() ||
+      !form.faculty.trim() ||
+      !form.gpa.trim()
+    ) {
+      return setError('Vui lòng điền đầy đủ các trường bắt buộc (*).');
+    }
+    if (!student && existingIds.includes(id.trim())) {
       return setError('Mã sinh viên đã tồn tại.');
-    if (!/^\S+@\S+\.\S+$/.test(form.email))
+    }
+    if (!isValidDate(form.dateOfBirth.trim())) {
+      return setError(
+        'Ngày sinh phải theo định dạng DD/MM/YYYY (ví dụ: 15/03/2004) và là ngày hợp lệ.',
+      );
+    }
+    if (!/^\S+@\S+\.\S+$/.test(form.email.trim())) {
       return setError('Email không đúng định dạng.');
-    if (!Number.isFinite(score) || score < 0 || score > 10)
+    }
+    if (!Number.isFinite(score) || score < 0 || score > 10) {
       return setError('GPA phải là số trong khoảng từ 0 đến 10.');
+    }
+
+    setError('');
     onSubmit({ ...form, id: id.trim(), gpa: score.toFixed(1) });
-    navigation.goBack();
+    Alert.alert(
+      'Thành công',
+      student
+        ? 'Cập nhật thông tin sinh viên thành công!'
+        : 'Thêm sinh viên mới thành công!',
+      [
+        {
+          text: 'OK',
+          onPress: () => navigation.goBack(),
+        },
+      ],
+      { cancelable: false },
+    );
   }
 
   return (
@@ -90,10 +132,10 @@ export function StudentFormScreen({
           placeholder="Nguyễn Văn A"
         />
         <FormField
-          label="Ngày sinh *"
+          label="Ngày sinh (DD/MM/YYYY) *"
           value={form.dateOfBirth}
           onChangeText={value => updateField('dateOfBirth', value)}
-          placeholder="YYYY-MM-DD"
+          placeholder="DD/MM/YYYY (ví dụ: 15/03/2004)"
         />
         <Text style={formStyles.fieldLabel}>Giới tính</Text>
         <View style={formStyles.genderRow}>
@@ -138,7 +180,7 @@ export function StudentFormScreen({
           placeholder="DHKTPM18A"
         />
         <FormField
-          label="Khoa"
+          label="Khoa *"
           value={form.faculty}
           onChangeText={value => updateField('faculty', value)}
           placeholder="Công nghệ thông tin"
