@@ -1,0 +1,168 @@
+import { StyleSheet } from 'react-native';
+import { colors } from './theme';
+
+export const gradeDetailStyles = StyleSheet.create({
+  container: {
+    flex: 1,
+    backgroundColor: colors.background,
+  },
+  content: {
+    padding: 16,
+    paddingBottom: 30,
+  },
+  summaryCard: {
+    backgroundColor: colors.primary,
+    borderRadius: 16,
+    padding: 20,
+    alignItems: 'center',
+    marginBottom: 20,
+    elevation: 3,
+    shadowColor: '#000',
+    shadowOpacity: 0.1,
+    shadowRadius: 6,
+    shadowOffset: { width: 0, height: 3 },
+  },
+  summaryTitle: {
+    fontSize: 13,
+    fontWeight: '700',
+    color: colors.primaryLight,
+    letterSpacing: 0.8,
+    marginBottom: 12,
+  },
+  gpaRow: {
+    flexDirection: 'row',
+    alignItems: 'center',
+    justifyContent: 'space-around',
+    width: '100%',
+    marginVertical: 6,
+  },
+  gpaItem: {
+    alignItems: 'center',
+    flex: 1,
+  },
+  gpaNumber: {
+    fontSize: 24,
+    fontWeight: 'bold',
+    color: '#FFFFFF',
+  },
+  gpaLabel: {
+    fontSize: 12,
+    color: colors.primaryLight,
+    marginTop: 2,
+  },
+  divider: {
+    width: 1,
+    height: 32,
+    backgroundColor: 'rgba(255,255,255,0.3)',
+  },
+  rankBadge: {
+    backgroundColor: colors.card,
+    paddingHorizontal: 14,
+    paddingVertical: 5,
+    borderRadius: 12,
+    marginTop: 14,
+  },
+  rankText: {
+    color: colors.primary,
+    fontWeight: 'bold',
+    fontSize: 13,
+  },
+  sectionHeaderTitle: {
+    fontSize: 16,
+    fontWeight: '700',
+    color: colors.textTitle,
+    marginBottom: 12,
+  },
+  gradeCard: {
+    backgroundColor: colors.card,
+    borderRadius: 14,
+    padding: 16,
+    marginBottom: 12,
+    borderWidth: 1,
+    borderColor: colors.border,
+    elevation: 1,
+    shadowColor: '#000',
+    shadowOpacity: 0.03,
+    shadowRadius: 4,
+    shadowOffset: { width: 0, height: 1 },
+  },
+  gradeCardHeader: {
+    flexDirection: 'row',
+    alignItems: 'center',
+    marginBottom: 14,
+  },
+  subjectCodeBadge: {
+    backgroundColor: '#F1F5F9',
+    paddingHorizontal: 8,
+    paddingVertical: 4,
+    borderRadius: 6,
+    marginRight: 8,
+  },
+  subjectCodeText: {
+    fontSize: 11,
+    fontWeight: '700',
+    color: colors.textBody,
+  },
+  subjectName: {
+    flex: 1,
+    fontSize: 14,
+    fontWeight: 'bold',
+    color: colors.textTitle,
+  },
+  letterBadge: {
+    backgroundColor: colors.primaryLight,
+    width: 32,
+    height: 32,
+    borderRadius: 16,
+    justifyContent: 'center',
+    alignItems: 'center',
+    marginLeft: 8,
+  },
+  letterText: {
+    color: colors.primary,
+    fontWeight: 'bold',
+    fontSize: 13,
+  },
+  scoreRow: {
+    flexDirection: 'row',
+    justifyContent: 'space-between',
+    backgroundColor: '#F8FAFC',
+    borderRadius: 10,
+    paddingVertical: 10,
+    paddingHorizontal: 12,
+  },
+  scoreCol: {
+    alignItems: 'center',
+    flex: 1,
+  },
+  scoreLabel: {
+    fontSize: 11,
+    color: colors.textMuted,
+    marginBottom: 4,
+  },
+  scoreVal: {
+    fontSize: 13,
+    fontWeight: '600',
+    color: colors.textTitle,
+  },
+  scoreTotal: {
+    color: colors.primary,
+    fontWeight: 'bold',
+    fontSize: 14,
+  },
+  backButton: {
+    backgroundColor: colors.card,
+    borderWidth: 1,
+    borderColor: '#CBD5E1',
+    borderRadius: 10,
+    paddingVertical: 12,
+    alignItems: 'center',
+    marginTop: 8,
+  },
+  backButtonText: {
+    color: colors.textBody,
+    fontSize: 14,
+    fontWeight: '600',
+  },
+});
+

@@ -1,0 +1,166 @@
+import { StyleSheet } from 'react-native';
+import { colors } from './theme';
+
+export const homeStyles = StyleSheet.create({
+  safeArea: {
+    flex: 1,
+    backgroundColor: colors.background,
+  },
+  container: {
+    flex: 1,
+    backgroundColor: colors.background,
+  },
+  content: {
+    padding: 16,
+    paddingBottom: 30,
+  },
+  studentCard: {
+    backgroundColor: colors.primary,
+    borderRadius: 16,
+    padding: 18,
+    flexDirection: 'row',
+    alignItems: 'center',
+    marginBottom: 20,
+    elevation: 3,
+    shadowColor: '#000',
+    shadowOpacity: 0.1,
+    shadowRadius: 6,
+    shadowOffset: { width: 0, height: 3 },
+  },
+  avatar: {
+    width: 52,
+    height: 52,
+    borderRadius: 26,
+    backgroundColor: colors.card,
+    justifyContent: 'center',
+    alignItems: 'center',
+    marginRight: 14,
+  },
+  avatarText: {
+    fontSize: 22,
+    fontWeight: 'bold',
+    color: colors.primary,
+  },
+  studentInfo: {
+    flex: 1,
+  },
+  greeting: {
+    fontSize: 13,
+    color: colors.primaryLight,
+  },
+  studentName: {
+    fontSize: 18,
+    fontWeight: 'bold',
+    color: colors.card,
+  },
+  studentMeta: {
+    fontSize: 12,
+    color: colors.card,
+    marginTop: 2,
+    opacity: 0.9,
+  },
+  sectionHeader: {
+    flexDirection: 'row',
+    justifyContent: 'space-between',
+    alignItems: 'center',
+    marginTop: 10,
+    marginBottom: 12,
+  },
+  sectionTitle: {
+    fontSize: 16,
+    fontWeight: '700',
+    color: colors.textTitle,
+  },
+  badgeCount: {
+    fontSize: 12,
+    color: colors.primary,
+    fontWeight: '600',
+    backgroundColor: colors.primaryLight,
+    paddingHorizontal: 8,
+    paddingVertical: 2,
+    borderRadius: 10,
+  },
+  taskCard: {
+    backgroundColor: colors.card,
+    borderRadius: 12,
+    padding: 14,
+    marginBottom: 10,
+    flexDirection: 'row',
+    alignItems: 'center',
+    borderWidth: 1,
+    borderColor: colors.border,
+    elevation: 1,
+  },
+  taskContent: {
+    flex: 1,
+  },
+  taskSubject: {
+    fontSize: 12,
+    color: colors.textMuted,
+    fontWeight: '500',
+  },
+  taskTitle: {
+    fontSize: 14,
+    fontWeight: '600',
+    color: colors.textTitle,
+    marginVertical: 2,
+  },
+  taskDue: {
+    fontSize: 12,
+    color: colors.textMuted,
+    fontWeight: '500',
+  },
+  subjectCard: {
+    backgroundColor: colors.card,
+    borderRadius: 12,
+    padding: 14,
+    marginBottom: 10,
+    flexDirection: 'row',
+    alignItems: 'center',
+    borderWidth: 1,
+    borderColor: colors.border,
+    elevation: 1,
+  },
+  subjectCodeBadge: {
+    backgroundColor: colors.primaryLight,
+    paddingHorizontal: 8,
+    paddingVertical: 6,
+    borderRadius: 8,
+    marginRight: 12,
+  },
+  subjectCodeText: {
+    fontSize: 12,
+    fontWeight: '700',
+    color: colors.primary,
+  },
+  subjectInfo: {
+    flex: 1,
+  },
+  subjectName: {
+    fontSize: 14,
+    fontWeight: '600',
+    color: colors.textTitle,
+  },
+  subjectMeta: {
+    fontSize: 12,
+    color: colors.textMuted,
+    marginTop: 2,
+  },
+  arrowIcon: {
+    fontSize: 20,
+    color: '#BDC3C7',
+    marginLeft: 8,
+  },
+  emptyBox: {
+    backgroundColor: colors.card,
+    padding: 16,
+    borderRadius: 12,
+    alignItems: 'center',
+    marginBottom: 10,
+  },
+  emptyText: {
+    color: colors.textMuted,
+    fontSize: 13,
+  },
+});
+
